@@ -1,0 +1,70 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye:
+    use_entites: true
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- give_time
+- show_products_categories
+- show_products
+- give_name
+- ask_product
+- sale_products
+- get_started
+- ask_shipping_methods
+- ask_payment_gateways
+
+entities:
+- name
+- cust_sex
+- cust_name
+
+
+slots:
+  category_id:
+    type: text
+
+
+responses:
+  utter_greet:
+  - text: Kính chào quý khách, tôi có thể giúp gì cho quý khách!
+  utter_greet_with_name:
+  - text: "Kính chào {cust_sex} {cust_name}. ABC Shop có thể giúp gì được {cust_sex} {cust_name} ạ?"
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Kính chào quý khách, hẹn gặp lại.
+  utter_iamabot:
+  - text: Mình là Sen Hồng bot, rất vui được phục vụ quý khách, tôi có thể giúp được gì cho quý khách.
+  utter_get_started:
+    - text: Chào mừng quý khách đến nông sản Đồng Tháp
+      buttons:
+        - title: Mua hàng
+          payload: /show_products_categories
+        - title: Các sản phẩm khuyến mãi
+          payload: /action_show_sale_products
+
+
+actions:
+- utter_greet
+- utter_get_started
+- action_show_time
+- action_show_products_categories
+- action_show_products
+- utter_greet_with_name
+- action_show_intent_categories
+- action_show_sale_products
+- action_show_shipping_methods
+- action_show_payment_gateways

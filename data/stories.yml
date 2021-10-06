@@ -1,0 +1,113 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+############
+
+- story: tell time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+
+- story: show products categories
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: show_products_categories
+  - action: action_show_products_categories
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ask name
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: give_name
+    - action: utter_greet_with_name
+
+- story: search product path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_product
+    - action: action_show_intent_categories
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: sale product path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: sale_products
+    - action: action_show_sale_products
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: shipping methods path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_shipping_methods
+    - action: action_show_shipping_methods
+    - intent: deny
+    - action: utter_goodbye
+
+- story: payment gateways path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_payment_gateways
+    - action: action_show_payment_gateways
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: shopping path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: show_products_categories
+    - action: action_show_products_categories
+    - intent: sale_products
+    - action: action_show_sale_products
+    - intent: ask_product
+    - action: action_show_intent_categories
+    - intent: ask_payment_gateways
+    - action: action_show_payment_gateways
+    - intent: ask_shipping_methods
+    - action: action_show_shipping_methods
+    - intent: deny
+    - action: utter_goodbye

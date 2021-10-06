@@ -1,0 +1,53 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: welcome to senhong
+  steps:
+  - intent: get_started
+  - action: utter_get_started
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: show product categories
+  steps:
+    - intent: show_products_categories
+    - action: action_show_products_categories
+
+- rule: show products
+  steps:
+    - intent: show_products
+    - action: action_show_products
+
+- rule: ask_name
+  steps:
+    - intent: give_name
+    - action: utter_greet_with_name
+
+- rule: ask product
+  steps:
+    - intent: ask_product
+    - action: action_show_intent_categories
+
+- rule: sale products
+  steps:
+    - intent: sale_products
+    - action: action_show_sale_products
+
+- rule: ask shipping
+  steps:
+    - intent: ask_shipping_methods
+    - action: action_show_shipping_methods
+
+- rule: ask payment gateways
+  steps:
+    - intent: ask_payment_gateways
+    - action: action_show_payment_gateways

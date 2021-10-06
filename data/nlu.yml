@@ -1,0 +1,166 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - xin chào
+    - chào buổi sáng
+    - chào buổi chiều
+    - chào buổi tối
+    - bạn có khỏe không
+    - chào bạn
+    - chào shop
+    - hello shop
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - tạm biệt
+    - hẹn gặp lại
+    - bye shop
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - bạn là ai?
+    - sen hồng bot là gì?
+    - sen hồng bot là ai?
+
+
+- intent: give_time
+  examples: |
+    - bây giờ là mấy giờ?
+    - mấy giờ rồi?
+    - hôm nay là thứ mấy
+
+
+- intent: show_products_categories
+  examples: |
+    - cửa hàng bạn có mấy loại sản phẩm?
+    - cho tôi xem danh mục sản phẩm?
+    - cửa hàng bạn có những gì?
+
+
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Thắng](cust_name)
+    - [Chị](cust_sex) là [Hằng](cust_name)
+    - [Em](cust_sex) là [Trang](cust_name)
+    - [Cô](cust_sex) [Vân](cust_name)
+    - [Chú](cust_sex) [Hùng](cust_name)
+    - [Anh[(cust_sex) [Thong](cust_name)
+    - [Chị](cust_sex) [Ngan](cust_name)
+    - [Anh](cust_sex) [Cong](cust_name)
+
+- intent: ask_product
+  examples: |
+    - tôi muốn mua [điện thoại](slug)
+    - tôi muốn mua [tivi](slug)
+    - tôi muôn mua [hàng tiêu dùng thực phẩm](slug)
+    - tôi muốn mua [đồng hồ](slug)
+    - tôi muốn mua [hàng tiêu dùng](slug)
+    - tôi muốn mua [thực phẩm](slug)
+    - tôi muốn mua [cá](slug)
+    - tôi muốn mua [trái cây](slug)
+    - tôi muốn mua [đặc sản](slug)
+    - tôi muốn mua [rau củ quả](slug)
+    - tôi muốn mua [rau](slug)
+
+- intent: sale_products
+  examples: |
+    - tôi muốn xem sản phẩm khuyến mãi
+    - cho tôi coi sản phẩm khuyển mãi
+    - các sản phẩm khuyển mãi
+    - cửa hàng bạn có những sản phẩm khuyến mãi nào
+    - cho tôi xem các sản phẩm khuyến mãi
+
+- intent: ask_shipping_methods
+  examples: |
+    - hình thức giao hàng như thế nào?
+    - giao hàng như thế nào?
+    - các phương thức giao hàng?
+    - cửa hàng sẽ giao hàng như thế nào?
+    - cho tôi biết có mấy phương thức giao hàng
+    - chi phí giao hàng như thế nào
+
+- intent: ask_payment_gateways
+  examples: |
+    - phương thức thanh toán như thế nào?
+    - hình thức thanh toán?
+    - trả tiền như thế nào?
+    - thanh toán đơn hàng như thế nào?
+    - bạn có thanh toán chuyển khoản không?
+    - bạn có thanh toán khi nhận hàng không?
+    - bạn có khi kiểm tra hàng không?
