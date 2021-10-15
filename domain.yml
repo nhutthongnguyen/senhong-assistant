@@ -25,6 +25,7 @@ entities:
 - name
 - cust_sex
 - cust_name
+- slug
 
 
 slots:

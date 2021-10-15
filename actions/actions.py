@@ -17,9 +17,9 @@ from woocommerce import API
 
 api = API(
 
-    url='http://localhost/senhong',
-    consumer_key='ck_5c04af2c04a32341677f9ae6797ee25f35211908',
-    consumer_secret='cs_4d71ab59e2156249f483081bf1d62c9247a27823',
+    url='https://nongsandongthap.000webhostapp.com/',
+    consumer_key='ck_e3bee011df97a906fc332eaea7dd4094f543b4bb',
+    consumer_secret='cs_3f1e29b028f404d65dda908d7be6b4b0d4cb000d',
     version='wc/v3'
 )
 
@@ -28,8 +28,10 @@ def create_carousel(products):
     for product in products:
         image = product['images'][0]['src']
         elements.append({
-            "title": product['name'],
-            "subtitle": f'Price: {product["price"]}',
+            "name": product['name'],
+            "price": f'Price: {product["price"]}',
+            "regular_price": product["regular_price"],
+            "sale_price": product["sale_price"],
             "image_url": image,
             "buttons": [
                 {"title": "Xem chi tiết", "url": product['permalink'], "type": "web_url"},
