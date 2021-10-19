@@ -111,6 +111,8 @@ nlu:
     - cửa hàng bạn có mấy loại sản phẩm?
     - cho tôi xem danh mục sản phẩm?
     - cửa hàng bạn có những gì?
+    - sản phẩm khác
+    - cho tôi xem các sản phẩm khác
 
 
 - intent: give_name
@@ -126,17 +128,20 @@ nlu:
 
 - intent: ask_product
   examples: |
-    - tôi muốn mua [điện thoại](slug)
-    - tôi muốn mua [tivi](slug)
-    - tôi muôn mua [hàng tiêu dùng thực phẩm](slug)
-    - tôi muốn mua [đồng hồ](slug)
-    - tôi muốn mua [hàng tiêu dùng](slug)
-    - tôi muốn mua [thực phẩm](slug)
-    - tôi muốn mua [cá](slug)
-    - tôi muốn mua [trái cây](slug)
-    - tôi muốn mua [đặc sản](slug)
-    - tôi muốn mua [rau củ quả](slug)
-    - tôi muốn mua [rau](slug)
+    - tôi muốn mua [cá]{"entity":"slug", "value":"cac-loai-ca"}
+    - tôi muốn mua [trái cây]{"entity":"slug", "value":"trai-cay"}
+    - tôi muốn mua [đặc sản]{"entity":"slug", "value":"dac-san"}
+    - tôi muốn mua [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
+    - tôi muốn mua [rau]{"entity":"slug", "value":"rau-cu-qua"}
+    - tôi muốn mua [gạo]{"entity":"slug", "value":"gao"}
+    - tôi muốn mua [lương thực]{"entity":"slug", "value":"rau-cu-qua"}
+    - cửa hàng bạn có [trái cây]{"entity":"slug", "value":"trai-cay"} không?
+    - cửa hàng bạn có [đặc sản]{"entity":"slug", "value":"dac-san"} không?
+    - cửa hàng bạn có [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} không?
+    - shop cho em xem các sản phẩm[đặc sản]{"entity":"slug", "value":"dac-san"} của cửa hàng đi ạ
+    - shop cho em xem các sản phẩm[trái cây]{"entity":"slug", "value":"dac-san"} của cửa hàng đi ạ
+    - shop cho em xem các sản phẩm[rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} của cửa hàng đi ạ
+    - shop cho em xem các sản phẩm[gạo]{"entity":"slug", "value":"gao"} của cửa hàng đi ạ
 
 - intent: sale_products
   examples: |
@@ -145,6 +150,10 @@ nlu:
     - các sản phẩm khuyển mãi
     - cửa hàng bạn có những sản phẩm khuyến mãi nào
     - cho tôi xem các sản phẩm khuyến mãi
+    - cho tôi xem các sản phẩm giảm giá
+    - tôi muốn xem các sản phẩm giảm giá
+    - các sản phẩm giảm giá
+    - cửa hàng bạn có những sản phẩm giảm giá nào
 
 - intent: ask_shipping_methods
   examples: |
