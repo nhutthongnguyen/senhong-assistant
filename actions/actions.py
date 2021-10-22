@@ -31,6 +31,7 @@ def create_carousel(products):
             "id": product['id'],
             "title": product['name'],
             "subtitle": f'Price: {product["price"]}',
+            "price": product['price'],
             "regular_price": product["regular_price"],
             "sale_price": product["sale_price"],
             "image_url": image,
@@ -58,10 +59,10 @@ class ShowProductCategories(Action):
         return "action_show_products_categories"
 
     def run(
-            self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any],
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         categories = api.get('products/categories').json()
 
@@ -86,18 +87,17 @@ class ShowProducts(Action):
         return "action_show_products"
 
     def run(
-            self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any],
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         category_id = tracker.get_slot("category_id")
         print("CATEGORY_ID = ", category_id)
         category = api.get(f"products/categories/{category_id}").json()
         products = api.get(f"products?category={category_id}").json()
         carousel = create_carousel(products)
-        dispatcher.utter_message(text=f"Mời bạn xem qua các sản phẩm thuộc loại {category['name']} bên dưới. Để mua sản phẩm khách hàng vui lòng"
-                                      f"chọn thêm vào giỏ hàng và điền đầy đủ thông tin để tiến hành thanh toán", attachment=carousel)
+        dispatcher.utter_message(text=f"Mời quý khách xem qua các sản phẩm thuộc loại {category['name']} ", attachment=carousel)
         return []
 
 
@@ -114,48 +114,44 @@ class SearchProduct(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        entities = tracker.latest_message['entities']
-        # categories = api.get('products/categories').json()
-
-        print(entities)
-
-        name_category = ""
-        slug = ""
         category_id = 0
+        slug = ""
+        name_category = ""
 
-        for e in entities:
-            if e['value'] == 'trái cây':
-               slug = 'trai-cay'
-               category_id = 22
-               name_category = "Trái cây"
+        list_slug = []
 
-            if e['value'] == 'rau củ quả' or e['value'] == 'rau' or e['value'] == 'củ quả':
-                slug = 'rau-cu-qua'
-                category_id = 23
-                name_category = "Rau củ quả"
-
-            if e['value'] == 'đặc sản':
-                slug = 'dac-san'
+        entities = tracker.latest_message['entities']
+        for entity in entities:
+            slug = entity['value']
+            if slug == 'đặc sản':
                 category_id = 21
-                name_category = "Đặc sản"
+                slug = 'dac-san'
+                name_category = 'Đặc sản'
+                list_slug.append(slug)
 
-            if e['value'] == 'gạo':
-                slug = 'gao'
+            if slug == 'trái cây' or slug == 'cây':
+                category_id = 22
+                slug = 'trai-cay'
+                name_category = 'Trái cây'
+                list_slug.append(slug)
+
+            if slug == 'rau củ quả' or slug == 'rau' or slug == 'rau củ':
+                category_id = 23
+                slug = 'rau-cu-qua'
+                name_category = 'Rau củ quả'
+                list_slug.append(slug)
+
+            if slug == 'gạo':
                 category_id = 24
-                name_category = "Gạo"
+                slug = 'gao'
+                name_category = 'Gạo'
+                list_slug.append(slug)
 
-
-        print(entities)
-        print("DAY LA SLUG ", category_id)
-        products = api.get(f"products?category={category_id}").json()
-        carousel = create_carousel(products)
-
-
-        if (products is not None):
+            print(list_slug)
+            print("slug = ", slug, " va category_id = ", category_id)
+            products = api.get(f"products?category={category_id}").json()
+            carousel = create_carousel(products)
             dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
-        else:
-            dispatcher.utter_message(text='Hiện tại sản phẩm mà bạn cần tìm trong cửa hàng chúng tôi không có!')
-            print("KHONG CO SAN PHAM")
 
         return []
 
@@ -173,7 +169,6 @@ class ShowSaleProducts(Action):
         products = api.get('products?per_page=100&').json()
         sale_products = list(filter(lambda product: product['on_sale'], products))
 
-        print()
         carousel = create_carousel(sale_products)
         dispatcher.utter_message(text="Sen Hồng hiện đang có các sản phẩm khuyến mãi như sau", attachment=carousel)
 
@@ -197,8 +192,6 @@ class ShowShippingMethods(Action):
         for method in shipping_methods:
             message = message + method['title'] + ", "
             count = count + 1
-
-        print('SAY HELLO')
 
         dispatcher.utter_message(text=f"Hiện tại cửa hàng có {count} phương thức giao hàng như: {message}")
 

@@ -115,33 +115,22 @@ nlu:
     - cho tôi xem các sản phẩm khác
 
 
-- intent: give_name
-  examples: |
-    - [Anh](cust_sex) là [Thắng](cust_name)
-    - [Chị](cust_sex) là [Hằng](cust_name)
-    - [Em](cust_sex) là [Trang](cust_name)
-    - [Cô](cust_sex) [Vân](cust_name)
-    - [Chú](cust_sex) [Hùng](cust_name)
-    - [Anh[(cust_sex) [Thong](cust_name)
-    - [Chị](cust_sex) [Ngan](cust_name)
-    - [Anh](cust_sex) [Cong](cust_name)
-
 - intent: ask_product
   examples: |
-    - tôi muốn mua [cá]{"entity":"slug", "value":"cac-loai-ca"}
-    - tôi muốn mua [trái cây]{"entity":"slug", "value":"trai-cay"}
-    - tôi muốn mua [đặc sản]{"entity":"slug", "value":"dac-san"}
-    - tôi muốn mua [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
-    - tôi muốn mua [rau]{"entity":"slug", "value":"rau-cu-qua"}
-    - tôi muốn mua [gạo]{"entity":"slug", "value":"gao"}
-    - tôi muốn mua [lương thực]{"entity":"slug", "value":"rau-cu-qua"}
-    - cửa hàng bạn có [trái cây]{"entity":"slug", "value":"trai-cay"} không?
-    - cửa hàng bạn có [đặc sản]{"entity":"slug", "value":"dac-san"} không?
-    - cửa hàng bạn có [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} không?
-    - shop cho em xem các sản phẩm[đặc sản]{"entity":"slug", "value":"dac-san"} của cửa hàng đi ạ
-    - shop cho em xem các sản phẩm[trái cây]{"entity":"slug", "value":"dac-san"} của cửa hàng đi ạ
-    - shop cho em xem các sản phẩm[rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} của cửa hàng đi ạ
-    - shop cho em xem các sản phẩm[gạo]{"entity":"slug", "value":"gao"} của cửa hàng đi ạ
+    - tôi muốn mua [cá](slug)
+    - shop cho em xem các sản phẩm[rau củ quả](slug) của cửa hàng đi ạ
+    - tôi muốn mua [trái cây](slug)
+    - cửa hàng bạn có [trái cây](slug) không?
+    - tôi muốn mua [đặc sản](slug)
+    - shop cho em xem các sản phẩm[đặc sản](slug) của cửa hàng đi ạ
+    - tôi muốn mua [rau củ quả](slug)
+    - shop cho em xem các sản phẩm[trái cây](slug) của cửa hàng đi ạ
+    - tôi muốn mua [rau](slug)
+    - cửa hàng bạn có [đặc sản](slug) không?
+    - tôi muốn mua [gạo](slug)
+    - cửa hàng bạn có [rau củ quả](slug:rau củ quả) không?
+    - tôi muốn mua [lương thực](slug:rau củ quả)
+    - shop cho em xem các sản phẩm[gạo](slug) của cửa hàng đi ạ
 
 - intent: sale_products
   examples: |
@@ -154,6 +143,7 @@ nlu:
     - tôi muốn xem các sản phẩm giảm giá
     - các sản phẩm giảm giá
     - cửa hàng bạn có những sản phẩm giảm giá nào
+    - shop cho em xem các sản phẩm giảm giá
 
 - intent: ask_shipping_methods
   examples: |
@@ -163,6 +153,10 @@ nlu:
     - cửa hàng sẽ giao hàng như thế nào?
     - cho tôi biết có mấy phương thức giao hàng
     - chi phí giao hàng như thế nào
+    - giao hàng như thế nào vậy shop
+    - phương thức giao hàng
+    - giao hàng
+    - nhận hàng bằng cách nào
 
 - intent: ask_payment_gateways
   examples: |

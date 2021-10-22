@@ -5,7 +5,7 @@ session_config:
 intents:
 - greet
 - goodbye:
-    use_entites: true
+    use_entities: true
 - affirm
 - deny
 - mood_great
@@ -23,8 +23,6 @@ intents:
 
 entities:
 - name
-- cust_sex
-- cust_name
 - slug
 
 
@@ -36,8 +34,6 @@ slots:
 responses:
   utter_greet:
   - text: Kính chào quý khách, tôi có thể giúp gì cho quý khách!
-  utter_greet_with_name:
-  - text: "Kính chào {cust_sex} {cust_name}. ABC Shop có thể giúp gì được {cust_sex} {cust_name} ạ?"
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -64,7 +60,6 @@ actions:
 - action_show_time
 - action_show_products_categories
 - action_show_products
-- utter_greet_with_name
 - action_show_intent_categories
 - action_show_sale_products
 - action_show_shipping_methods
