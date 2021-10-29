@@ -120,16 +120,22 @@ class SearchProduct(Action):
 
         list_slug = []
 
+        sentence = 'Chàng trai 9X Quảng Trị khởi nghiệp từ nấm sò' # copy trên trình duyệt
+        handwrite = 'Chàng trai 9x Quảng Trị khởi nghiệp từ nấm sò' # tự viết
+        print(sentence)
+        print(handwrite)
+
         entities = tracker.latest_message['entities']
         for entity in entities:
             slug = entity['value']
-            if slug == 'đặc sản':
+            print("day la slug = ", slug)
+            if slug == 'dac san' or slug == 'sản' or slug == 'đặc sản':
                 category_id = 21
                 slug = 'dac-san'
                 name_category = 'Đặc sản'
                 list_slug.append(slug)
 
-            if slug == 'trái cây' or slug == 'cây':
+            if slug == 'trái cây' or slug == 'cây' or slug == 'trai cay':
                 category_id = 22
                 slug = 'trai-cay'
                 name_category = 'Trái cây'
@@ -147,11 +153,11 @@ class SearchProduct(Action):
                 name_category = 'Gạo'
                 list_slug.append(slug)
 
-            print(list_slug)
-            print("slug = ", slug, " va category_id = ", category_id)
-            products = api.get(f"products?category={category_id}").json()
-            carousel = create_carousel(products)
-            dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
+        print(list_slug)
+        print("slug=", slug, " va category_id=", category_id)
+        products = api.get(f"products?category={category_id}").json()
+        carousel = create_carousel(products)
+        dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
 
         return []
 

@@ -4,8 +4,7 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
-- goodbye:
-    use_entities: true
+- goodbye
 - affirm
 - deny
 - mood_great

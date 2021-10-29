@@ -49,12 +49,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: ask name
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: give_name
-    - action: utter_greet_with_name
 
 - story: search product path
   steps:

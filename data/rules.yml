@@ -27,11 +27,6 @@ rules:
     - intent: show_products
     - action: action_show_products
 
-- rule: ask_name
-  steps:
-    - intent: give_name
-    - action: utter_greet_with_name
-
 - rule: ask product
   steps:
     - intent: ask_product

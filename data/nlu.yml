@@ -123,6 +123,8 @@ nlu:
     - cửa hàng bạn có [trái cây](slug) không?
     - tôi muốn mua [đặc sản](slug)
     - shop cho em xem các sản phẩm[đặc sản](slug) của cửa hàng đi ạ
+    - bạn cho mình xem các loại [gạo](slug)
+    - bạn cho mình xem các loại [trái cây](slug)
     - tôi muốn mua [rau củ quả](slug)
     - shop cho em xem các sản phẩm[trái cây](slug) của cửa hàng đi ạ
     - tôi muốn mua [rau](slug)
@@ -131,6 +133,7 @@ nlu:
     - cửa hàng bạn có [rau củ quả](slug:rau củ quả) không?
     - tôi muốn mua [lương thực](slug:rau củ quả)
     - shop cho em xem các sản phẩm[gạo](slug) của cửa hàng đi ạ
+    - bạn cho mình xem các loại [rau củ quả](slug)
 
 - intent: sale_products
   examples: |
