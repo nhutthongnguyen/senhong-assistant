@@ -1,0 +1,28 @@
+version: "2.0"
+stories:
+- story: ask shipping methods (.\tests\test_stories.yml)
+  steps:
+  - intent: ask_shipping_methods
+  - action: action_show_shipping_method  # predicted: action_show_shipping_methods
+- story: ask products (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_product
+    entities:
+    - slug: dac-san
+  - action: action_show_intent_categories
+  - intent: ask_product
+    entities:
+    - slug: trai-cay
+  - action: action_show_intent_categories
+  - intent: ask_product
+    entities:
+    - slug: rau-cu-qua
+  - action: action_show_intent_categories
+  - intent: ask_shipping_methods
+  - action: action_show_shipping_metods  # predicted: action_show_shipping_methods
+  - intent: ask_payment_gateways
+  - action: action_show_payment_gateways
+  - intent: deny
+  - action: utter_goodbye

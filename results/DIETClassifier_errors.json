@@ -1,0 +1,50 @@
+[
+  {
+    "text": "shop cho em xem các sản phẩmrau củ quả của cửa hàng đi ạ",
+    "entities": [
+      {
+        "start": 31,
+        "end": 43,
+        "value": "rau-cu-qua",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "shop cho em xem các sản phẩmđặc sản của cửa hàng đi ạ",
+    "entities": [
+      {
+        "start": 31,
+        "end": 40,
+        "value": "dac-san",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "shop cho em xem các sản phẩmtrái cây của cửa hàng đi ạ",
+    "entities": [
+      {
+        "start": 31,
+        "end": 40,
+        "value": "trai-cay",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "shop cho em xem các sản phẩmgạo của cửa hàng đi ạ",
+    "entities": [
+      {
+        "start": 31,
+        "end": 35,
+        "value": "gao",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

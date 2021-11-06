@@ -22,10 +22,11 @@ pipeline:
      epochs: 100
      constrain_similarities: true
    - name: FallbackClassifier
-     threshold: 0.3
+     threshold: 0.6
      ambiguity_threshold: 0.1
    - name: RegexEntityExtractor
      use_lookup_tables: True
+
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

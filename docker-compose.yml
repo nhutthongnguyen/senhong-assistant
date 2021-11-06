@@ -1,9 +1,10 @@
 version: '3.4'
 services:
-  rasa:
+  rasa-server:
     image: rasa-bot:latest
     working_dir: /app
     build: "./"
+    restart: always
     volumes:
       - ./actions:/app/actions
       - ./data:/app/data
@@ -14,13 +15,14 @@ services:
     networks:
       - all
 
-  rasa-actions:
+  rasa-actions-server:
     image: rasa-bot:latest
     working_dir: /app
     build: "./"
     restart: always
     volumes:
       - ./actions:/app/actions
+    command: ["rasa", "run", "actions"]
     ports:
       - '5005:5055'
     networks:

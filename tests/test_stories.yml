@@ -83,9 +83,41 @@ stories:
     intent: goodbye
   - action: utter_goodbye
 
-- story: bot challenge
+- story: ask shipping methods
   steps:
   - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      phương thức giao hàng như thế nào vậy shop
+    intent: ask_shipping_methods
+  - action: action_show_shipping_method
+
+- story: ask products
+  steps:
+  - user: |
+      chào shop
+    intent: greet
+  - action: utter_greet
+  - user: |
+      cửa hàng bạn có [đặc sản]{"entity":"slug", "value":"dac-san"} không
+    intent: ask_product
+  - action: action_show_intent_categories
+  - user: |
+      shop cho em xem các sản phẩm [trái cây]{"entity":"slug", "value":"trai-cay"}
+    intent: ask_product
+  - action: action_show_intent_categories
+  - user: |
+      cửa hàng bạn có [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
+    intent: ask_product
+  - action: action_show_intent_categories
+  - user: |
+      giao hàng như thế nào vậy shop
+    intent: ask_shipping_methods
+  - action: action_show_shipping_metods
+  - user: |
+      vậy mình thanh toán như thế nào vậy shop
+    intent: ask_payment_gateways
+  - action: action_show_payment_gateways
+  - user: |
+      Ok
+    intent: deny
+  - action: utter_goodbye
+

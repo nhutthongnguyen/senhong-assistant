@@ -12,11 +12,6 @@ rules:
   - intent: get_started
   - action: utter_get_started
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
 - rule: show product categories
   steps:
     - intent: show_products_categories
@@ -46,3 +41,9 @@ rules:
   steps:
     - intent: ask_payment_gateways
     - action: action_show_payment_gateways
+
+
+- rule: out of scope
+  steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope

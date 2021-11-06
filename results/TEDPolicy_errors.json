@@ -1,0 +1,38 @@
+[
+  {
+    "text": "cửa hàng bạn có đặc sản không",
+    "entities": [
+      {
+        "start": 20,
+        "end": 29,
+        "value": "dac-san",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "shop cho em xem các sản phẩm trái cây",
+    "entities": [
+      {
+        "start": 32,
+        "end": 41,
+        "value": "trai-cay",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "cửa hàng bạn có rau củ quả",
+    "entities": [
+      {
+        "start": 20,
+        "end": 32,
+        "value": "rau-cu-qua",
+        "entity": "slug"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

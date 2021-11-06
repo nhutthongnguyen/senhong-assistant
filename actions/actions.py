@@ -92,6 +92,8 @@ class ShowProducts(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
+        text = tracker.latest_message.get('text')
+        print("TEXT = ",text)
         category_id = tracker.get_slot("category_id")
         print("CATEGORY_ID = ", category_id)
         category = api.get(f"products/categories/{category_id}").json()
@@ -118,43 +120,27 @@ class SearchProduct(Action):
         slug = ""
         name_category = ""
 
-        list_slug = []
+        entity = next(tracker.get_latest_entity_values("slug"), None)
+        print("TEXT SEARCH ", entity)
 
-        sentence = 'Chàng trai 9X Quảng Trị khởi nghiệp từ nấm sò' # copy trên trình duyệt
-        handwrite = 'Chàng trai 9x Quảng Trị khởi nghiệp từ nấm sò' # tự viết
-        print(sentence)
-        print(handwrite)
 
-        entities = tracker.latest_message['entities']
-        for entity in entities:
-            slug = entity['value']
-            print("day la slug = ", slug)
-            if slug == 'dac san' or slug == 'sản' or slug == 'đặc sản':
-                category_id = 21
-                slug = 'dac-san'
-                name_category = 'Đặc sản'
-                list_slug.append(slug)
+        if entity == 'dac-san':
+            name_category = "Đặc sản"
+            category_id = 21
 
-            if slug == 'trái cây' or slug == 'cây' or slug == 'trai cay':
-                category_id = 22
-                slug = 'trai-cay'
-                name_category = 'Trái cây'
-                list_slug.append(slug)
+        if entity == 'trai-cay':
+            name_category = "Trái cây"
+            category_id = 22
 
-            if slug == 'rau củ quả' or slug == 'rau' or slug == 'rau củ':
-                category_id = 23
-                slug = 'rau-cu-qua'
-                name_category = 'Rau củ quả'
-                list_slug.append(slug)
+        if entity == 'rau-cu-qua':
+            name_category = "Rau củ quả"
+            category_id = 23
 
-            if slug == 'gạo':
-                category_id = 24
-                slug = 'gao'
-                name_category = 'Gạo'
-                list_slug.append(slug)
+        if entity == 'gao':
+            name_category = "Gạo"
+            category_id = 24
 
-        print(list_slug)
-        print("slug=", slug, " va category_id=", category_id)
+        print("slug=", entity, " va category_id=", category_id)
         products = api.get(f"products?category={category_id}").json()
         carousel = create_carousel(products)
         dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
@@ -172,6 +158,9 @@ class ShowSaleProducts(Action):
         tracker: Tracker,
         domain: "DomainDict",
     ) -> List[Dict[Text, Any]]:
+
+        text = tracker.latest_message.get('text')
+        print("TEXT SALE = ", text)
         products = api.get('products?per_page=100&').json()
         sale_products = list(filter(lambda product: product['on_sale'], products))
 
@@ -224,21 +213,6 @@ class ShowPaymentGateways(Action):
             num_methods = num_methods + 1
 
         dispatcher.utter_message(text=f"Hiện tại cửa hàng có {num_methods} thanh toán như: {gateways}")
-
-        return []
-
-class ActionShowTime(Action):
-    def name(self) -> Text:
-        return 'action_show_time'
-
-    def run(
-        self,
-        dispatcher: "CollectingDispatcher",
-        tracker: Tracker,
-        domain: "DomainDict",
-    ) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text=f"Bây giờ là {dt.datetime.now()}")
 
         return []
 

@@ -32,13 +32,6 @@ stories:
 
 ############
 
-- story: tell time
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_time
-  - action: action_show_time
-
 
 - story: show products categories
   steps:

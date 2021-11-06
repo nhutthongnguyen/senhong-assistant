@@ -9,17 +9,14 @@ intents:
 - deny
 - mood_great
 - mood_unhappy
-- bot_challenge
-- give_time
 - show_products_categories
 - show_products
-- give_name
 - ask_product
 - sale_products
 - get_started
 - ask_shipping_methods
 - ask_payment_gateways
-
+- out_of_scope
 entities:
 - name
 - slug
@@ -51,12 +48,13 @@ responses:
           payload: /show_products_categories
         - title: Các sản phẩm khuyến mãi
           payload: /action_show_sale_products
+  utter_out_of_scope:
+    - text: Rất tiếc, cửa hàng của chúng tôi chỉ phục vụ bán các sản phẩm nông sản tỉnh Đồng Tháp 😛
 
 
 actions:
 - utter_greet
 - utter_get_started
-- action_show_time
 - action_show_products_categories
 - action_show_products
 - action_show_intent_categories

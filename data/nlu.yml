@@ -88,22 +88,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - bạn là ai?
-    - sen hồng bot là gì?
-    - sen hồng bot là ai?
-
-
-- intent: give_time
-  examples: |
-    - bây giờ là mấy giờ?
-    - mấy giờ rồi?
-    - hôm nay là thứ mấy
 
 
 - intent: show_products_categories
@@ -114,26 +98,25 @@ nlu:
     - sản phẩm khác
     - cho tôi xem các sản phẩm khác
 
-
 - intent: ask_product
   examples: |
     - tôi muốn mua [cá](slug)
-    - shop cho em xem các sản phẩm[rau củ quả](slug) của cửa hàng đi ạ
-    - tôi muốn mua [trái cây](slug)
-    - cửa hàng bạn có [trái cây](slug) không?
-    - tôi muốn mua [đặc sản](slug)
-    - shop cho em xem các sản phẩm[đặc sản](slug) của cửa hàng đi ạ
-    - bạn cho mình xem các loại [gạo](slug)
-    - bạn cho mình xem các loại [trái cây](slug)
-    - tôi muốn mua [rau củ quả](slug)
-    - shop cho em xem các sản phẩm[trái cây](slug) của cửa hàng đi ạ
-    - tôi muốn mua [rau](slug)
-    - cửa hàng bạn có [đặc sản](slug) không?
-    - tôi muốn mua [gạo](slug)
-    - cửa hàng bạn có [rau củ quả](slug:rau củ quả) không?
-    - tôi muốn mua [lương thực](slug:rau củ quả)
-    - shop cho em xem các sản phẩm[gạo](slug) của cửa hàng đi ạ
-    - bạn cho mình xem các loại [rau củ quả](slug)
+    - shop cho em xem các sản phẩm[rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} của cửa hàng đi ạ
+    - tôi muốn mua [trái cây]{"entity":"slug", "value":"trai-cay"}
+    - cửa hàng bạn có [trái cây]{"entity":"slug", "value":"trai-cay"} không?
+    - tôi muốn mua [đặc sản]{"entity":"slug", "value":"dac-san"}
+    - shop cho em xem các sản phẩm[đặc sản]{"entity":"slug", "value":"dac-san"} của cửa hàng đi ạ
+    - bạn cho mình xem các loại [gạo]{"entity":"slug", "value":"gao"}
+    - bạn cho mình xem các loại [trái cây]{"entity":"slug", "value":"trai-cay"}
+    - tôi muốn mua [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
+    - shop cho em xem các sản phẩm[trái cây]{"entity":"slug", "value":"trai-cay"} của cửa hàng đi ạ
+    - tôi muốn mua [rau]{"entity":"slug", "value":"rau-cu-qua"}
+    - cửa hàng bạn có [đặc sản]{"entity":"slug", "value":"dac-san"} không?
+    - tôi muốn mua [gạo]{"entity":"slug", "value":"gao"}
+    - cửa hàng bạn có [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} không?
+    - tôi muốn mua [lương thực]{"entity":"slug", "value":"rau-cu-qua"}
+    - shop cho em xem các sản phẩm[gạo]{"entity":"slug", "value":"gao"} của cửa hàng đi ạ
+    - bạn cho mình xem các loại [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
 
 - intent: sale_products
   examples: |
@@ -170,3 +153,17 @@ nlu:
     - bạn có thanh toán chuyển khoản không?
     - bạn có thanh toán khi nhận hàng không?
     - bạn có khi kiểm tra hàng không?
+
+- intent: out_of_scope
+  examples: |
+    - cửa hàng bạn có bán ô tô không
+    - cho tôi xem các sản phẩm ô tô
+    - tôi muốn mua xe
+    - nhà hàng nào gần đây nhất
+    - hôm nay là thứ mấy
+    - Việt Nam có bao nhiêu tỉnh thành
+    - làm sao để đặt vé máy bay
+    - làm sao để đặt vé tàu hỏa
+    - bạn biết làm toán không
+    - tôi muốn đặt phòng khách sạn
+    - tôi muốn đặt thức ăn
