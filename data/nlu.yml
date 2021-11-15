@@ -100,24 +100,29 @@ nlu:
 
 - intent: ask_product
   examples: |
-    - tôi muốn mua [cá](slug)
-    - shop cho em xem các sản phẩm[rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} của cửa hàng đi ạ
-    - tôi muốn mua [trái cây]{"entity":"slug", "value":"trai-cay"}
-    - cửa hàng bạn có [trái cây]{"entity":"slug", "value":"trai-cay"} không?
-    - tôi muốn mua [đặc sản]{"entity":"slug", "value":"dac-san"}
-    - shop cho em xem các sản phẩm[đặc sản]{"entity":"slug", "value":"dac-san"} của cửa hàng đi ạ
-    - bạn cho mình xem các loại [gạo]{"entity":"slug", "value":"gao"}
-    - bạn cho mình xem các loại [trái cây]{"entity":"slug", "value":"trai-cay"}
-    - tôi muốn mua [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
-    - shop cho em xem các sản phẩm[trái cây]{"entity":"slug", "value":"trai-cay"} của cửa hàng đi ạ
-    - tôi muốn mua [rau]{"entity":"slug", "value":"rau-cu-qua"}
-    - cửa hàng bạn có [đặc sản]{"entity":"slug", "value":"dac-san"} không?
-    - tôi muốn mua [gạo]{"entity":"slug", "value":"gao"}
-    - cửa hàng bạn có [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"} không?
-    - tôi muốn mua [lương thực]{"entity":"slug", "value":"rau-cu-qua"}
-    - shop cho em xem các sản phẩm[gạo]{"entity":"slug", "value":"gao"} của cửa hàng đi ạ
-    - bạn cho mình xem các loại [rau củ quả]{"entity":"slug", "value":"rau-cu-qua"}
+    - shop cho em xem các sản phẩm[rau củ quả](slug) của cửa hàng đi ạ
+    - tôi muốn mua [trái cây](slug)
+    - cửa hàng bạn có [trái cây](slug) không?
+    - tôi muốn mua [đặc sản](slug)
+    - shop cho em xem các sản phẩm[đặc sản](slug) của cửa hàng đi ạ
+    - bạn cho mình xem các loại [gạo](slug)
+    - bạn cho mình xem các loại [trái cây](slug)
+    - tôi muốn mua [rau củ quả](slug)
+    - shop cho em xem các sản phẩm[trái cây](slug) của cửa hàng đi ạ
+    - tôi muốn mua [rau](slug)
+    - cửa hàng bạn có [đặc sản](slug) không?
+    - tôi muốn mua [gạo](slug)
+    - cửa hàng bạn có [rau củ quả](slug) không?
+    - tôi muốn mua [lương thực](slug)
+    - shop cho em xem các sản phẩm[gạo](slug) của cửa hàng đi ạ
+    - bạn cho mình xem các loại [rau củ quả](slug)
 
+- lookup: slug
+  examples: |
+    - dac-san
+    - rau-cu-qua
+    - trai-cay
+    - gao
 - intent: sale_products
   examples: |
     - tôi muốn xem sản phẩm khuyến mãi
@@ -143,7 +148,7 @@ nlu:
     - phương thức giao hàng
     - giao hàng
     - nhận hàng bằng cách nào
-
+# hỏi phương thức thanh toán
 - intent: ask_payment_gateways
   examples: |
     - phương thức thanh toán như thế nào?
@@ -167,3 +172,16 @@ nlu:
     - bạn biết làm toán không
     - tôi muốn đặt phòng khách sạn
     - tôi muốn đặt thức ăn
+
+- intent: unknown
+  examples: |
+    - fdsfdsfsdf
+    - jgkljgdfg
+    - 115445dsfdsfdsf
+    - dfdfsdf8212148
+    - 2 + 2 = ?
+    - bạn có biết làm toán không?
+    - chủ tịch nước là ai
+    - hôm nay là thứ mấy
+    - ngày mai có mưa không
+

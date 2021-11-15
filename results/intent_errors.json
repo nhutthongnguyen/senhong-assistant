@@ -4,7 +4,7 @@
     "intent": "greet",
     "intent_prediction": {
       "name": "goodbye",
-      "confidence": 0.6660516858100891
+      "confidence": 0.6430539488792419
     }
   }
 ]

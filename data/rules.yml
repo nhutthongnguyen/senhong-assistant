@@ -12,6 +12,8 @@ rules:
   - intent: get_started
   - action: utter_get_started
 
+# bất kì khi nào người dùng nói xem danh mục
+# thì quy tắc này được kích hoạt
 - rule: show product categories
   steps:
     - intent: show_products_categories
@@ -27,6 +29,8 @@ rules:
     - intent: ask_product
     - action: action_show_intent_categories
 
+# bất kì khi nào người dùng nói xem sản phẩm giảm giá
+# thì hành động hiển thị danh sách sản phẩm giảm giá được kích hạot
 - rule: sale products
   steps:
     - intent: sale_products
@@ -47,3 +51,9 @@ rules:
   steps:
     - intent: out_of_scope
     - action: utter_out_of_scope
+
+- rule: out of system
+  steps:
+    - intent: unknown
+    - action: utter_unknown
+

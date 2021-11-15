@@ -1,21 +1,15 @@
 {
-  "mood_great": {
+  "utter_goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "ask_shipping_methods": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2
-  },
-  "action_show_shipping_method": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1
-  },
-  "[đặc sản]{\"entity\": \"slug\", \"value\": \"dac-san\"}": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
   },
   "action_show_payment_gateways": {
     "precision": 1.0,
@@ -23,7 +17,37 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "action_show_shipping_metods": {
+  "utter_cheer_up": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "utter_did_that_help": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "mood_unhappy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "action_show_shipping_methods": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "[trái cây]{\"entity\": \"slug\", \"value\": \"trai-cay\"}": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
@@ -35,11 +59,29 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "utter_goodbye": {
+  "affirm": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 1
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3
+  },
+  "[rau củ quả]{\"entity\": \"slug\", \"value\": \"rau-cu-qua\"}": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "utter_greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5
+    "support": 6
   },
   "utter_happy": {
     "precision": 1.0,
@@ -47,22 +89,28 @@
     "f1-score": 1.0,
     "support": 3
   },
-  "deny": {
+  "action_show_intent_categories": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 3
   },
-  "utter_cheer_up": {
+  "mood_great": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "ask_product": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 3
   },
-  "[rau củ quả]{\"entity\": \"slug\", \"value\": \"rau-cu-qua\"}": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+  "[đặc sản]{\"entity\": \"slug\", \"value\": \"dac-san\"}": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 1
   },
   "action_listen": {
@@ -77,81 +125,27 @@
     "f1-score": 1.0,
     "support": 6
   },
-  "ask_shipping_methods": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "utter_greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
-  "mood_unhappy": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
-  "[trái cây]{\"entity\": \"slug\", \"value\": \"trai-cay\"}": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "ask_product": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
-  "utter_did_that_help": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
-  "affirm": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "goodbye": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "action_show_intent_categories": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
   "micro avg": {
-    "precision": 1.0,
-    "recall": 0.9733333333333334,
-    "f1-score": 0.9864864864864865,
+    "precision": 0.9861111111111112,
+    "recall": 0.9466666666666667,
+    "f1-score": 0.9659863945578231,
     "support": 75
   },
   "macro avg": {
-    "precision": 0.9090909090909091,
-    "recall": 0.9090909090909091,
-    "f1-score": 0.9090909090909091,
+    "precision": 0.8333333333333334,
+    "recall": 0.8412698412698412,
+    "f1-score": 0.8317460317460318,
     "support": 75
   },
   "weighted avg": {
-    "precision": 0.9733333333333334,
-    "recall": 0.9733333333333334,
-    "f1-score": 0.9733333333333334,
+    "precision": 0.9533333333333334,
+    "recall": 0.9466666666666667,
+    "f1-score": 0.9475555555555555,
     "support": 75
   },
   "conversation_accuracy": {
-    "accuracy": 0.75,
-    "correct": 6,
+    "accuracy": 0.875,
+    "correct": 7,
     "with_warnings": 0,
     "total": 8
   }

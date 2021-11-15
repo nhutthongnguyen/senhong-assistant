@@ -6,7 +6,10 @@ pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-   - name: WhitespaceTokenizer
+   # cấu hình cho Rasa NLU
+   - name: WhitespaceTokenizer # thay cho WhitespaceTokenizer
+     intent_tokenization_flag: True
+     intent_split_symbol: "+"
    - name: RegexFeaturizer
    - name: LexicalSyntacticFeaturizer
    - name: CountVectorsFeaturizer
@@ -26,7 +29,6 @@ pipeline:
      ambiguity_threshold: 0.1
    - name: RegexEntityExtractor
      use_lookup_tables: True
-
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

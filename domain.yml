@@ -17,6 +17,7 @@ intents:
 - ask_shipping_methods
 - ask_payment_gateways
 - out_of_scope
+- unknown
 entities:
 - name
 - slug
@@ -45,11 +46,31 @@ responses:
     - text: Chào mừng quý khách đến nông sản Đồng Tháp
       buttons:
         - title: Mua hàng
-          payload: /show_products_categories
+          payload: "/show_products_categories"
         - title: Các sản phẩm khuyến mãi
-          payload: /action_show_sale_products
+          payload: "/sale_products"
   utter_out_of_scope:
-    - text: Rất tiếc, cửa hàng của chúng tôi chỉ phục vụ bán các sản phẩm nông sản tỉnh Đồng Tháp 😛
+    - text: Rất tiếc, cửa hàng của chúng tôi chỉ phục vụ bán các sản phẩm nông sản tỉnh Đồng Tháp 😛 Bạn có thể xem các sản phẩm dưới đây.
+      buttons:
+        - title: Danh mục sản phẩm
+          payload: "/show_products_categories"
+        - title: Các sản phẩm khuyến mãi
+          payload: "/sale_products"
+        - title: Hình thức giao hàng
+          payload: "/ask_shipping_methods"
+        - title: Phương thức thanh toán
+          payload: "/ask_payment_gateways"
+
+
+  utter_unknown:
+    - text: Xin lỗi, mình không hiểu ý định của bạn 🙃 Bạn có thể xem qua các sản phẩm giảm giá của cửa hàng ☺
+      buttons:
+        - title: Sản phẩm giảm giá
+          payload: "/sale_products"
+        - title: Hình thức giao hàng
+          payload: "/ask_shipping_methods"
+        - title: Phương thức thanh toán
+          payload: "/ask_payment_gateways"
 
 
 actions:

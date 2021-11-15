@@ -5,7 +5,7 @@
       {
         "start": 31,
         "end": 43,
-        "value": "rau-cu-qua",
+        "value": "rau củ quả",
         "entity": "slug"
       }
     ],
@@ -17,7 +17,7 @@
       {
         "start": 31,
         "end": 40,
-        "value": "dac-san",
+        "value": "đặc sản",
         "entity": "slug"
       }
     ],
@@ -29,7 +29,7 @@
       {
         "start": 31,
         "end": 40,
-        "value": "trai-cay",
+        "value": "trái cây",
         "entity": "slug"
       }
     ],
@@ -41,7 +41,7 @@
       {
         "start": 31,
         "end": 35,
-        "value": "gao",
+        "value": "gạo",
         "entity": "slug"
       }
     ],

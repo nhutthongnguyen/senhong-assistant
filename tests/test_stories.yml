@@ -88,7 +88,7 @@ stories:
   - user: |
       phương thức giao hàng như thế nào vậy shop
     intent: ask_shipping_methods
-  - action: action_show_shipping_method
+  - action: action_show_shipping_methods
 
 - story: ask products
   steps:
@@ -111,7 +111,7 @@ stories:
   - user: |
       giao hàng như thế nào vậy shop
     intent: ask_shipping_methods
-  - action: action_show_shipping_metods
+  - action: action_show_shipping_methods
   - user: |
       vậy mình thanh toán như thế nào vậy shop
     intent: ask_payment_gateways

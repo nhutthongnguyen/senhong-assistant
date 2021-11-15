@@ -1,32 +1,11 @@
 [
   {
-    "text": "tôi muốn mua cá",
-    "entities": [
-      {
-        "start": 14,
-        "end": 17,
-        "value": "cá",
-        "entity": "slug"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "slug",
-        "start": 14,
-        "end": 17,
-        "confidence_entity": 0.9973672032356262,
-        "value": "cá",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
     "text": "shop cho em xem các sản phẩmrau củ quả của cửa hàng đi ạ",
     "entities": [
       {
         "start": 31,
         "end": 43,
-        "value": "rau-cu-qua",
+        "value": "rau củ quả",
         "entity": "slug"
       }
     ],
@@ -38,7 +17,7 @@
       {
         "start": 14,
         "end": 23,
-        "value": "trai-cay",
+        "value": "trái cây",
         "entity": "slug"
       }
     ],
@@ -47,12 +26,9 @@
         "entity": "slug",
         "start": 14,
         "end": 23,
-        "confidence_entity": 0.9989054203033447,
-        "value": "trai-cay",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9985125660896301,
+        "value": "trái cây",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -62,7 +38,7 @@
       {
         "start": 20,
         "end": 29,
-        "value": "trai-cay",
+        "value": "trái cây",
         "entity": "slug"
       }
     ],
@@ -71,12 +47,9 @@
         "entity": "slug",
         "start": 20,
         "end": 29,
-        "confidence_entity": 0.9943423271179199,
-        "value": "trai-cay",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9942883253097534,
+        "value": "trái cây",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -86,7 +59,7 @@
       {
         "start": 14,
         "end": 23,
-        "value": "dac-san",
+        "value": "đặc sản",
         "entity": "slug"
       }
     ],
@@ -95,12 +68,9 @@
         "entity": "slug",
         "start": 14,
         "end": 23,
-        "confidence_entity": 0.9979767203330994,
-        "value": "dac-san",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9986227750778198,
+        "value": "đặc sản",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -110,7 +80,7 @@
       {
         "start": 31,
         "end": 40,
-        "value": "dac-san",
+        "value": "đặc sản",
         "entity": "slug"
       }
     ],
@@ -122,7 +92,7 @@
       {
         "start": 30,
         "end": 34,
-        "value": "gao",
+        "value": "gạo",
         "entity": "slug"
       }
     ],
@@ -131,12 +101,9 @@
         "entity": "slug",
         "start": 30,
         "end": 34,
-        "confidence_entity": 0.9976904392242432,
-        "value": "gao",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9980898499488831,
+        "value": "gạo",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -146,7 +113,7 @@
       {
         "start": 30,
         "end": 39,
-        "value": "trai-cay",
+        "value": "trái cây",
         "entity": "slug"
       }
     ],
@@ -155,12 +122,9 @@
         "entity": "slug",
         "start": 30,
         "end": 39,
-        "confidence_entity": 0.9952098727226257,
-        "value": "trai-cay",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9943935871124268,
+        "value": "trái cây",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -170,7 +134,7 @@
       {
         "start": 14,
         "end": 26,
-        "value": "rau-cu-qua",
+        "value": "rau củ quả",
         "entity": "slug"
       }
     ],
@@ -179,12 +143,9 @@
         "entity": "slug",
         "start": 14,
         "end": 26,
-        "confidence_entity": 0.939990758895874,
-        "value": "rau-cu-qua",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9396340250968933,
+        "value": "rau củ quả",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -194,7 +155,7 @@
       {
         "start": 31,
         "end": 40,
-        "value": "trai-cay",
+        "value": "trái cây",
         "entity": "slug"
       }
     ],
@@ -206,7 +167,7 @@
       {
         "start": 14,
         "end": 17,
-        "value": "rau-cu-qua",
+        "value": "rau",
         "entity": "slug"
       }
     ],
@@ -215,12 +176,9 @@
         "entity": "slug",
         "start": 14,
         "end": 17,
-        "confidence_entity": 0.9031833410263062,
-        "value": "rau-cu-qua",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.8366920948028564,
+        "value": "rau",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -230,7 +188,7 @@
       {
         "start": 20,
         "end": 29,
-        "value": "dac-san",
+        "value": "đặc sản",
         "entity": "slug"
       }
     ],
@@ -239,12 +197,9 @@
         "entity": "slug",
         "start": 20,
         "end": 29,
-        "confidence_entity": 0.9666121006011963,
-        "value": "dac-san",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9860659241676331,
+        "value": "đặc sản",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -254,7 +209,7 @@
       {
         "start": 14,
         "end": 18,
-        "value": "gao",
+        "value": "gạo",
         "entity": "slug"
       }
     ],
@@ -263,12 +218,9 @@
         "entity": "slug",
         "start": 14,
         "end": 18,
-        "confidence_entity": 0.9985059499740601,
-        "value": "gao",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9989293217658997,
+        "value": "gạo",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -278,7 +230,7 @@
       {
         "start": 20,
         "end": 32,
-        "value": "rau-cu-qua",
+        "value": "rau củ quả",
         "entity": "slug"
       }
     ],
@@ -287,12 +239,9 @@
         "entity": "slug",
         "start": 20,
         "end": 32,
-        "confidence_entity": 0.9633063077926636,
-        "value": "rau-cu-qua",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9508349299430847,
+        "value": "rau củ quả",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -302,7 +251,7 @@
       {
         "start": 14,
         "end": 25,
-        "value": "rau-cu-qua",
+        "value": "lương thực",
         "entity": "slug"
       }
     ],
@@ -311,12 +260,9 @@
         "entity": "slug",
         "start": 14,
         "end": 25,
-        "confidence_entity": 0.9967992305755615,
-        "value": "rau-cu-qua",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9986380934715271,
+        "value": "lương thực",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -326,7 +272,7 @@
       {
         "start": 31,
         "end": 35,
-        "value": "gao",
+        "value": "gạo",
         "entity": "slug"
       }
     ],
@@ -338,7 +284,7 @@
       {
         "start": 30,
         "end": 42,
-        "value": "rau-cu-qua",
+        "value": "rau củ quả",
         "entity": "slug"
       }
     ],
@@ -347,12 +293,9 @@
         "entity": "slug",
         "start": 30,
         "end": 42,
-        "confidence_entity": 0.9802610874176025,
-        "value": "rau-cu-qua",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "confidence_entity": 0.9486626982688904,
+        "value": "rau củ quả",
+        "extractor": "DIETClassifier"
       }
     ]
   }

@@ -3,10 +3,11 @@
     "text": "cửa hàng bạn có đặc sản không",
     "entities": [
       {
+        "text": "cửa hàng bạn có đặc sản không",
         "start": 20,
         "end": 29,
-        "value": "dac-san",
-        "entity": "slug"
+        "entity": "slug",
+        "value": "dac-san"
       }
     ],
     "predicted_entities": []
@@ -15,10 +16,11 @@
     "text": "shop cho em xem các sản phẩm trái cây",
     "entities": [
       {
+        "text": "shop cho em xem các sản phẩm trái cây",
         "start": 32,
         "end": 41,
-        "value": "trai-cay",
-        "entity": "slug"
+        "entity": "slug",
+        "value": "trai-cay"
       }
     ],
     "predicted_entities": []
@@ -27,10 +29,11 @@
     "text": "cửa hàng bạn có rau củ quả",
     "entities": [
       {
+        "text": "cửa hàng bạn có rau củ quả",
         "start": 20,
         "end": 32,
-        "value": "rau-cu-qua",
-        "entity": "slug"
+        "entity": "slug",
+        "value": "rau-cu-qua"
       }
     ],
     "predicted_entities": []

@@ -93,7 +93,7 @@ class ShowProducts(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         text = tracker.latest_message.get('text')
-        print("TEXT = ",text)
+        print("TEXT = ", text)
         category_id = tracker.get_slot("category_id")
         print("CATEGORY_ID = ", category_id)
         category = api.get(f"products/categories/{category_id}").json()
@@ -124,19 +124,19 @@ class SearchProduct(Action):
         print("TEXT SEARCH ", entity)
 
 
-        if entity == 'dac-san':
+        if entity == 'đặc sản':
             name_category = "Đặc sản"
             category_id = 21
 
-        if entity == 'trai-cay':
+        if entity == 'trái cây':
             name_category = "Trái cây"
             category_id = 22
 
-        if entity == 'rau-cu-qua':
+        if entity == 'rau củ quả' or entity == 'rau' or entity == 'rau củ':
             name_category = "Rau củ quả"
             category_id = 23
 
-        if entity == 'gao':
+        if entity == 'gạo':
             name_category = "Gạo"
             category_id = 24
 

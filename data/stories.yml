@@ -81,7 +81,7 @@ stories:
     - intent: deny
     - action: utter_goodbye
 
-
+# mẫu chuyện cho mua sắm
 - story: shopping path
   steps:
     - intent: greet
