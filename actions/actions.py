@@ -117,28 +117,26 @@ class SearchProduct(Action):
     ) -> List[Dict[Text, Any]]:
 
         category_id = 0
-        slug = ""
         name_category = ""
 
         entity = next(tracker.get_latest_entity_values("slug"), None)
-        print("TEXT SEARCH ", entity)
+        print("TEXT SEARCH ", entity.lower())
+        entity = entity.lower()
+        entity = entity.strip()
 
-
-        if entity == 'đặc sản':
-            name_category = "Đặc sản"
+        if entity == "đặc sản":
+            name_category = "Đặc sản"
             category_id = 21
-
-        if entity == 'trái cây':
-            name_category = "Trái cây"
+        
+        if entity == "trái cây":
+            name_category = "Trái cây"
             category_id = 22
 
-        if entity == 'rau củ quả' or entity == 'rau' or entity == 'rau củ':
-            name_category = "Rau củ quả"
-            category_id = 23
+        if entity == "rau củ quả" or entity == "rau củ" or entity == "củ quả":
+            name_category = "Rau củ quả"
+            category_id == 23
 
-        if entity == 'gạo':
-            name_category = "Gạo"
-            category_id = 24
+
 
         print("slug=", entity, " va category_id=", category_id)
         products = api.get(f"products?category={category_id}").json()

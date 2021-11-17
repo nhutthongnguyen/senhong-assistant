@@ -15,14 +15,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-    - xin chào
-    - chào buổi sáng
-    - chào buổi chiều
-    - chào buổi tối
-    - bạn có khỏe không
-    - chào bạn
-    - chào shop
     - hello shop
+    - xin chào
 - intent: goodbye
   examples: |
     - good afternoon
@@ -36,8 +30,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
-    - tạm biệt
-    - hẹn gặp lại
+    - hẹn gặp lại
     - bye shop
 - intent: affirm
   examples: |
@@ -92,96 +85,88 @@ nlu:
 
 - intent: show_products_categories
   examples: |
-    - cửa hàng bạn có mấy loại sản phẩm?
-    - cho tôi xem danh mục sản phẩm?
-    - cửa hàng bạn có những gì?
-    - sản phẩm khác
-    - cho tôi xem các sản phẩm khác
+    - cửa hàng của bạn có mấy loại sản phẩm
+    - cho tôi xem danh mục sản phẩm?
+    - cửa hàng bạn có những gì?
+    - sản phẩm khác
+    - cho tôi xem các sản phẩm khác
 
 - intent: ask_product
   examples: |
-    - shop cho em xem các sản phẩm[rau củ quả](slug) của cửa hàng đi ạ
-    - tôi muốn mua [trái cây](slug)
-    - cửa hàng bạn có [trái cây](slug) không?
-    - tôi muốn mua [đặc sản](slug)
-    - shop cho em xem các sản phẩm[đặc sản](slug) của cửa hàng đi ạ
-    - bạn cho mình xem các loại [gạo](slug)
-    - bạn cho mình xem các loại [trái cây](slug)
-    - tôi muốn mua [rau củ quả](slug)
-    - shop cho em xem các sản phẩm[trái cây](slug) của cửa hàng đi ạ
-    - tôi muốn mua [rau](slug)
-    - cửa hàng bạn có [đặc sản](slug) không?
-    - tôi muốn mua [gạo](slug)
-    - cửa hàng bạn có [rau củ quả](slug) không?
-    - tôi muốn mua [lương thực](slug)
-    - shop cho em xem các sản phẩm[gạo](slug) của cửa hàng đi ạ
-    - bạn cho mình xem các loại [rau củ quả](slug)
+    - shop cho em xem các sản phẩm [rau củ quả](slug) của cửa hàng đi ạ
+    - tôi muốn mua [trái cây](slug)
+    - cửa hàng bạn có [trái cây](slug) không?
+    - tôi muốn mua [đặc sản](slug)
+    - bạn cho mình xem các sản phẩm [đặc sản](slug) của cửa hàng đi ạ
+    - bạn cho mình xem các loại [gạo](slug)
+    - bạn cho mình xem các loại [trái cây](slug)
+    - tôi muốn mua [rau củ quả](slug)
+    - shop cho em xem các sản phẩm [trái cây](slug) của cửa hàng đi ạ
+    - tôi muốn mua [gạo](slug)
+    - cửa hàng bạn có [rau củ quả](slug) không?
+    - tôi muốn mua [lương thực](slug)
+    - shop cho em xem các sản phẩm [gạo](slug) của cửa hàng đị ạ
+    - bạn cho mình xem các loại [rau củ quả](slug)
 
-- lookup: slug
-  examples: |
-    - dac-san
-    - rau-cu-qua
-    - trai-cay
-    - gao
+
 - intent: sale_products
   examples: |
-    - tôi muốn xem sản phẩm khuyến mãi
-    - cho tôi coi sản phẩm khuyển mãi
-    - các sản phẩm khuyển mãi
-    - cửa hàng bạn có những sản phẩm khuyến mãi nào
-    - cho tôi xem các sản phẩm khuyến mãi
-    - cho tôi xem các sản phẩm giảm giá
-    - tôi muốn xem các sản phẩm giảm giá
-    - các sản phẩm giảm giá
-    - cửa hàng bạn có những sản phẩm giảm giá nào
-    - shop cho em xem các sản phẩm giảm giá
+    - tôi muốn xem sản phẩm khuyến mãi
+    - cho tôi coi sản phẩm khuyến mãi
+    - các sản phẩm khuyến mãi
+    - cửa hàng bạn có những sản phẩm khuyến mãi nào
+    - cho tôi xem các sản phẩm khuyến mãi
+    - cho tôi xem các sản phẩm giảm giá
+    - các sản phẩm giảm giá
+    - cửa hàng bạn có những sản phẩm giảm giá nào
+    - shop cho em xem các sản phẩm giảm giá
 
 - intent: ask_shipping_methods
   examples: |
-    - hình thức giao hàng như thế nào?
-    - giao hàng như thế nào?
-    - các phương thức giao hàng?
-    - cửa hàng sẽ giao hàng như thế nào?
-    - cho tôi biết có mấy phương thức giao hàng
-    - chi phí giao hàng như thế nào
-    - giao hàng như thế nào vậy shop
-    - phương thức giao hàng
-    - giao hàng
-    - nhận hàng bằng cách nào
+    - hình thức giao hàng như thế nào?
+    - hình thức giao hàng như thế nào vậy shop?
+    - giao hàng như thế nào?
+    - các phương thức giao hàng?
+    - cửa hàng sẽ giao hàng như thế nào?
+    - cho tôi biết có mấy phương thức giao hàng
+    - giao hàng
+    - nhận hàng bằng cách nào
+    - nhận hàng bằng cách nào vậy shop
+
 # hỏi phương thức thanh toán
 - intent: ask_payment_gateways
   examples: |
-    - phương thức thanh toán như thế nào?
-    - hình thức thanh toán?
-    - trả tiền như thế nào?
-    - thanh toán đơn hàng như thế nào?
-    - bạn có thanh toán chuyển khoản không?
-    - bạn có thanh toán khi nhận hàng không?
-    - bạn có khi kiểm tra hàng không?
+    - phương thức thanh toán như thế nào?
+    - hình thức thanh toán?
+    - trả tiền như thế nào?
+    - thanh toán đơn hàng như thế nào?
+    - bạn có thanh toán chuyển khoản không?
+    - bạn có thanh toán khi nhận hàng không?
+    - bạn có thanh toán khi kiểm tra hàng không?
 
 - intent: out_of_scope
   examples: |
-    - cửa hàng bạn có bán ô tô không
-    - cho tôi xem các sản phẩm ô tô
-    - tôi muốn mua xe
-    - nhà hàng nào gần đây nhất
-    - hôm nay là thứ mấy
-    - Việt Nam có bao nhiêu tỉnh thành
-    - làm sao để đặt vé máy bay
-    - làm sao để đặt vé tàu hỏa
-    - bạn biết làm toán không
-    - tôi muốn đặt phòng khách sạn
-    - tôi muốn đặt thức ăn
+    - cửa hàng bạn có ô tô không
+    - cho tôi xem các sản phẩm ô tô không
+    - tôi muốn mua xe 
+    - nhà hàng nào gần đây nhất
+    - hôm nay là thứ mấy
+    - Việt Nam có bao nhiêu tỉnh thành?
+    - làm sao để đặt vé máy bay
+    - làm sao để đặt vé tàu hỏa
+    - bạn có biết làm toán không
+    - tôi muốn đặt phòng khách sạn
+    - tôi muốn đặt thức ăn
+
 
 - intent: unknown
   examples: |
-    - fdsfdsfsdf
-    - jgkljgdfg
-    - 115445dsfdsfdsf
-    - dfdfsdf8212148
+    - fsdfsfjksljfkdsjf
+    - fsdjfsdkfljdskfdksf
+    - fkdskfsdkfdf
     - 2 + 2 = ?
-    - bạn có biết làm toán không?
-    - chủ tịch nước là ai
-    - hôm nay là thứ mấy
-    - ngày mai có mưa không
+    - bạn có biết làm toán không?
+    - chủ tịch nước là ai
+    - hôm nay là thứ mấy
+    - ngày mai có mưa không
 
