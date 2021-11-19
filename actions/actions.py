@@ -128,17 +128,17 @@ class SearchProduct(Action):
             name_category = "Đặc sản"
             category_id = 21
         
-        if entity == "trái cây":
+        if entity == "trái cây" or entity == "trai cay":
             name_category = "Trái cây"
             category_id = 22
 
-        if entity == "rau củ quả" or entity == "rau củ" or entity == "củ quả":
+        if entity == "rau củ quả":
             name_category = "Rau củ quả"
-            category_id == 23
+            category_id = 23
 
 
 
-        print("slug=", entity, " va category_id=", category_id)
+        print("slug=", name_category, " va category_id=", category_id)
         products = api.get(f"products?category={category_id}").json()
         carousel = create_carousel(products)
         dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
