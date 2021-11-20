@@ -30,7 +30,7 @@ def create_carousel(products):
         elements.append({
             "id": product['id'],
             "title": product['name'],
-            "subtitle": f'Price: {product["price"]}',
+            "subtitle": f'Giá: {product["price"]}',
             "price": product['price'],
             "regular_price": product["regular_price"],
             "sale_price": product["sale_price"],
@@ -124,7 +124,7 @@ class SearchProduct(Action):
         entity = entity.lower()
         entity = entity.strip()
 
-        if entity == "đặc sản":
+        if entity == "đặc sản" or entity == "dac san":
             name_category = "Đặc sản"
             category_id = 21
         
@@ -132,9 +132,13 @@ class SearchProduct(Action):
             name_category = "Trái cây"
             category_id = 22
 
-        if entity == "rau củ quả":
+        if entity == "rau củ quả" or entity == "rau" or entity == "củ quả":
             name_category = "Rau củ quả"
             category_id = 23
+
+        if entity == "gạo" or entity == "gao":
+            name_category = "Gạo"
+            category_id == 24
 
 
 

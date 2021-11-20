@@ -30,7 +30,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: Kính chào quý khách, tôi có thể giúp gì cho quý khách!
+  - text: Kính chào quý khách, tôi có thể giúp gì cho quý khách! 😊
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -41,7 +41,7 @@ responses:
   utter_goodbye:
   - text: Kính chào quý khách, hẹn gặp lại.
   utter_iamabot:
-  - text: Mình là Sen Hồng bot, rất vui được phục vụ quý khách, tôi có thể giúp được gì cho quý khách.
+  - text: Mình là trợ lý ảo Sen Hồng, rất vui được phục vụ quý khách, tôi có thể giúp được gì cho quý khách 🥰
   utter_get_started:
     - text: Chào mừng quý khách đến nông sản Đồng Tháp
       buttons:
@@ -50,7 +50,7 @@ responses:
         - title: Các sản phẩm khuyến mãi
           payload: "/sale_products"
   utter_out_of_scope:
-    - text: Rất tiếc, cửa hàng của chúng tôi chỉ phục vụ bán các sản phẩm nông sản tỉnh Đồng Tháp 😛 Bạn có thể xem các sản phẩm dưới đây.
+    - text: Rất tiếc, cửa hàng của chúng tôi chỉ phục vụ bán các sản phẩm nông sản tỉnh Đồng Tháp 😍 Bạn có thể xem các sản phẩm dưới đây 🤗
       buttons:
         - title: Danh mục sản phẩm
           payload: "/show_products_categories"
@@ -63,10 +63,12 @@ responses:
 
 
   utter_unknown:
-    - text: Xin lỗi, mình không hiểu ý định của bạn 🙃 Bạn có thể xem qua các sản phẩm giảm giá của cửa hàng ☺
+    - text: Xin lỗi, mình không hiểu ý định của bạn 🙃 Bạn có thể xem qua các một số từ khóa được tìm kiếm nổi bật dưới đây 😘
       buttons:
         - title: Sản phẩm giảm giá
           payload: "/sale_products"
+        - title: Danh mục sản phẩm
+          payload: "/show_products_categories"
         - title: Hình thức giao hàng
           payload: "/ask_shipping_methods"
         - title: Phương thức thanh toán
