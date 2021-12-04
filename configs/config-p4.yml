@@ -4,6 +4,8 @@ language: vi
 pipeline:
   - name: LanguageModelTokenizer # thay cho WhitespaceTokenizer
   - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "rasa/LaBSE"
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
@@ -18,6 +20,7 @@ pipeline:
     threshold: 0.6
     ambiguity_threshold: 0.1
   - name: HFTransformersNLP
+    model_name: "bert"
     model_weights: bert-base-multilingual-cased
 
 policies:

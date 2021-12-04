@@ -3,6 +3,9 @@ language: vi
 
 pipeline:
    - name: VietnameseTokenizer # thay cho WhitespaceTokenizer
+   - name: RegexFeaturizer
+   - name: LexicalSyntacticFeaturizer
+   - name: CountVectorsFeaturizer
    - name: CountVectorsFeaturizer
      analyzer: char_wb
      min_ngram: 1
@@ -10,6 +13,7 @@ pipeline:
    - name: DIETClassifier
      epochs: 100
      constrain_similarities: true
+   - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100
      constrain_similarities: true

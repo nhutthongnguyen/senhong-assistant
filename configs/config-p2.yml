@@ -7,9 +7,8 @@ pipeline:
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
    # cấu hình cho Rasa NLU
-   - name: SpacyNLP
-     model: "vi_space_model"
-   - name: SpacyTokenizer # thay cho WhitespaceTokenizer
+  
+   - name: VietnameseTokenizer # thay cho WhitespaceTokenizer
    - name: RegexFeaturizer
    - name: LexicalSyntacticFeaturizer
    - name: CountVectorsFeaturizer
@@ -27,8 +26,7 @@ pipeline:
    - name: FallbackClassifier
      threshold: 0.6
      ambiguity_threshold: 0.1
-   - name: RegexEntityExtractor
-     use_lookup_tables: True
+  
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

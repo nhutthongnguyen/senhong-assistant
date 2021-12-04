@@ -19,7 +19,7 @@ pipeline:
    - name: LanguageModelFeaturizer
      model_name: phobert
      model_weights: vinai/phobert-base
-     cache_dir: cache_dir
+     cache_dir: phobert_base
 
 policies:
 
