@@ -15,13 +15,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from woocommerce import API
 
 
-api = API(
 
-    url='https://nongsandongthap.000webhostapp.com/',
-    consumer_key='ck_e3bee011df97a906fc332eaea7dd4094f543b4bb',
-    consumer_secret='cs_3f1e29b028f404d65dda908d7be6b4b0d4cb000d',
-    version='wc/v3'
-)
 
 def create_carousel(products):
     elements = []
@@ -77,8 +71,7 @@ class ShowProductCategories(Action):
                 "category_id": category_id,
                 "payload": f'/show_products{{"category_id": {category_id}}}'
             })
-
-        dispatcher.utter_message("Đây là danh mục sản phẩm của Sen Hồng, bạn muốn mua loại sản phẩm nào?", buttons=buttons)
+        dispatcher.utter_message("Đây là danh mục sản phẩm của Sen Hồng, bạn muốn mua loại sản phẩm nào ạ?", buttons=buttons)
         return [AllSlotsReset()]
 
 
