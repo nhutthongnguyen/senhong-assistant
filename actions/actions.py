@@ -7,6 +7,7 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 import datetime as dt
+from dis import dis
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -15,7 +16,20 @@ from rasa_sdk.executor import CollectingDispatcher
 from woocommerce import API
 
 
+api = API(
 
+    # LOCALHOST
+    # url = "http://localhost/nongsandongthap/",
+    # consumer_key="ck_e3bee011df97a906fc332eaea7dd4094f543b4bb",
+    # consumer_secret="cs_3f1e29b028f404d65dda908d7be6b4b0d4cb000d",
+    # version="wc/v3"
+
+    # HOSTING
+    url='https://nongsandongthap.000webhostapp.com/',
+    consumer_key='ck_e3bee011df97a906fc332eaea7dd4094f543b4bb',
+    consumer_secret='cs_3f1e29b028f404d65dda908d7be6b4b0d4cb000d',
+    version='wc/v3'
+)
 
 def create_carousel(products):
     elements = []
@@ -29,6 +43,7 @@ def create_carousel(products):
             "regular_price": product["regular_price"],
             "sale_price": product["sale_price"],
             "image_url": image,
+            # "images": product['images'],
             "description": product['description'],
             "short_description": product['short_description'],
             "buttons": [
@@ -58,8 +73,8 @@ class ShowProductCategories(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        categories = api.get('products/categories').json()
 
+        categories = api.get('products/categories').json()
         print("DAY LA DANH MUC SAN PHAM KHAC")
         buttons = []
         for category in categories:
@@ -113,9 +128,10 @@ class SearchProduct(Action):
         name_category = ""
 
         entity = next(tracker.get_latest_entity_values("slug"), None)
-        print("TEXT SEARCH ", entity.lower())
+        print(entity)
         entity = entity.lower()
         entity = entity.strip()
+       
 
         if entity == "đặc sản" or entity == "dac san":
             name_category = "Đặc sản"
@@ -131,14 +147,30 @@ class SearchProduct(Action):
 
         if entity == "gạo" or entity == "gao":
             name_category = "Gạo"
-            category_id == 24
+            category_id = 24
 
 
 
         print("slug=", name_category, " va category_id=", category_id)
-        products = api.get(f"products?category={category_id}").json()
-        carousel = create_carousel(products)
-        dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
+
+        if category_id != 0:
+            products = api.get(f"products?category={category_id}").json()
+            carousel = create_carousel(products)
+            dispatcher.utter_message(text=f"Sản phẩm {name_category} mà bạn cần tìm ", attachment=carousel)
+        else:
+            dispatcher.utter_message(text="Sản phẩm mà bạn đang tìm hiện tại không có sẵn trong cửa hàng. Bạn vui lòng quay lại sau nhé ❤")
+            categories = api.get('products/categories').json()
+            buttons = []
+            for category in categories:
+                category_id = category['id']
+                category_name = category['name']
+
+                buttons.append({
+                    "title": category_name,
+                    "category_id": category_id,
+                    "payload": f'/show_products{{"category_id": {category_id}}}'
+                })            
+            dispatcher.utter_message(text="Bạn có thể xem qua các sản phẩm có sẵn trong hệ thống dưới đây", buttons=buttons)
 
         return []
 
